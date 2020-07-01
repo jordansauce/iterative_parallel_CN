@@ -1,0 +1,36 @@
+0
+0
+-5
+1
+0
+1
+1
+1
+-10
+10
+400
+0.001
+10000
+100
+4
+2
+
+Inputs:
+1 - The strength of the non-linear coupling constant-(gstrength)  (0 or -10)
+2 - The initial state psi: 0->gaussian 1->sech-------(iswitchpsi) (0 or 1)
+3 - The position of the initial wavefunction---------(x0)         (-5)
+4 - The width of the initial gaussian or sech--------(sigma0)     (1)
+5 - The initial momentum kick------------------------(kick)       (0)
+6 - The potential V: 0->none 1->harmonic-------------(iswitchv)   (1)
+7 - The potential strength---------------------------(v0)         (1)
+8 - The potential's characteristic frequency---------(omega)      (1)
+9 - The leftmost boundary position-------------------(xleft)      (-10)
+10 - The rightmost boundary position------------------(xright)     (10)
+11 - The number of spatial points---------------------(nxpoints)   (200)
+12 - The timestep size--------------------------------(dt)         (0.001)
+13 - The number of temporal points--------------------(ntpoints)   (10000)
+14 - The number of calculating steps between outputs--(noutputstep)(100)
+15 - Number of parallel domains to break grid into----(ndomains)   (4)
+16 - Number of iterations to perform each step--------(niterations) (2)
+
+Remember to keep dt much smaller than dx^2. That is, dt*(nxpoints/(xright-xleft))^2 << 1

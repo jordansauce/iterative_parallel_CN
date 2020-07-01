@@ -1,0 +1,17 @@
+# Run in terminal with "gnuplot animate.gpi"
+
+set terminal gif animate delay 1
+set output 'iterative_parallel_CN.gif'
+set yrange [-0.6:1]
+set ylabel 'Wavefunction density'
+set xlabel 'Position (natural units)'
+set key default
+imaxtime = 10000
+do for[i=0:int(imaxtime)]{
+set arrow from 0.,-1. to 0.,1. nohead front lc rgb "grey" lw 1 dt 2
+ ofile = sprintf('./iterative_parallel_CN_2iterations_%06d.dat',i)
+ plot ofile using 1:2 with linespoints title '|Psi|^2',\
+      ofile using 1:3 with linespoints title 'Real Amplitude',\
+      ofile using 1:4 with linespoints title 'Imaginary Amplitude',\
+      ofile using 1:5 with lines title 'Potential'
+}
