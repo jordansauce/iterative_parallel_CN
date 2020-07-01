@@ -343,7 +343,7 @@ int main()
 
 
 	printf("This program solves the Schrodinger equation in a potential\n");
-	cout << "\nInput by hitting return between these:\n";
+	cout << "\nInput parameters were:\n";
 	cout << "The strength of the non-linear coupling constant-(gstrength):   " << gstrength << "\n";
 	cout << "The initial state psi: 0->gaussian 1->sech-------(iswitchpsi):  " << iswitchpsi << "\n";
 	cout << "The position of the initial gaussian-------------(x0):          " << x0 << "\n";
